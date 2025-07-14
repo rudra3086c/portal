@@ -1,40 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Portal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 600px;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    header {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    p.description {
+      text-align: center;
+      margin-top: -10px;
+      color: #555;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    form input,
+    form label {
+      grid-column: span 2;
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="number"],
+    form input[type="password"] {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form label {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .note {
+      grid-column: span 2;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .buttons {
+      grid-column: span 2;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .reset-btn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
 </head>
-<body  class="Login">
-    <div >
-    <header style="font-size: x-large; font-weight: bold;opacity: 0;">REGISTER PAGE</header>
-    <br><br>
-    <div id="form">
+<body>
+  <div class="container">
+    <header>REGISTER PAGE</header>
+    <p class="description">REGISTER HERE</p>
     <form>
-        <p style="margin-top: 0% ;text-align:center;">REGISTER HERE</p>
-        <!-- style="border-radius: 12px; color: black; background-color: whitesmoke;border: 0;font-size: 30px;" -->
-          <!-- style="border-radius: 12px; color: black; background-color: whitesmoke;border: 0;font-size: 30px;margin-top:50px;" -->
-           <!-- style="color: brown; -->
-        <hr>
-        <label>First Name</label><br>
-        <input type="text"><br>
-        <label>Last Name</label>
-        <input type="text"><br>
-        <label>Phone No</label><br>
-        <input type="number"><br>
-        <label>Email</label>
-        <input type="email"><br>
-        <label>Address</label><br>
-        <input type="text"><br>
-        <label>Create Password:</label><br>
-        <input type="password"><br>
-        <p>U will recieve the Id from the college<br></p>
-        <a href="dashboard.html"><button type="button">Submit</button></a>
-        <button type="reset">Reset</button>
+      <input type="text" placeholder="First Name" required />
+      <input type="text" placeholder="Last Name" required />
+      <input type="number" placeholder="Phone Number" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Your Address" required />
+      <label>Create Password:</label>
+      <input type="password" placeholder="Enter Password" required />
+      <p class="note">You will receive the ID from the college.</p>
+      <div class="buttons">
+        <a href="dashboard.html"><button type="button" class="submit-btn">Submit</button></a>
+        <button type="reset" class="reset-btn">Reset</button>
+      </div>
     </form>
-    </div>
-    
-    </div>
+  </div>
 </body>
 </html>
